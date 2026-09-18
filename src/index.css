@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #fbf8f2;
+    --bg-secondary: #fffdfa;
+    --bg-tertiary: #f4ede0;
+    --bg-hover: #ede4d3;
+    --bg-card: #fffdfa;
+    --border-color: #e8dccb;
+    --border-subtle: #f2e9dc;
+    --text-primary: #2b221a;
+    --text-secondary: #635345;
+    --text-muted: #9c8978;
+    --accent-glow: rgba(249, 115, 22, 0.18);
+  }
+
+  .dark {
+    --bg-primary: #0e0e12;
+    --bg-secondary: #14141a;
+    --bg-tertiary: #1b1b24;
+    --bg-hover: #242430;
+    --bg-card: #16161d;
+    --border-color: rgba(254, 215, 170, 0.1);
+    --border-subtle: rgba(254, 215, 170, 0.05);
+    --text-primary: #fffaf5;
+    --text-secondary: #d6cdc4;
+    --text-muted: #8c827a;
+    --accent-glow: rgba(249, 115, 22, 0.3);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(249, 115, 22, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 0.45);
+}
+
+/* Warm Cream Glassmorphism */
+.glass-panel {
+  background: rgba(20, 20, 26, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(254, 215, 170, 0.1);
+}
+
+.light .glass-panel {
+  background: rgba(251, 248, 242, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 220, 203, 0.85);
+}
+
+/* Warm Glow Effects */
+.glow-orange {
+  box-shadow: 0 0 25px -5px rgba(249, 115, 22, 0.45);
+}
+
+.glow-peach {
+  box-shadow: 0 0 20px -5px rgba(253, 226, 208, 0.4);
+}
+
+.glow-coral {
+  box-shadow: 0 0 25px -5px rgba(255, 99, 99, 0.45);
+}
+
+.glow-amber {
+  box-shadow: 0 0 20px -5px rgba(245, 158, 11, 0.4);
+}
+
+/* Code block highlight styling */
+pre code {
+  font-family: 'JetBrains Mono', monospace;
+}
